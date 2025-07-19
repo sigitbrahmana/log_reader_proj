@@ -6,8 +6,8 @@ import re
 import io  # untuk membuat CSV download button
 
 def main():    
-    st.set_page_config(page_title="Optlog Parserr", layout="wide")
-    st.title("📄 Optlog Parser")
+    st.set_page_config(page_title="Sigit Optlog Parser", layout="wide")
+    st.title("📄 Optlog Parser - File format yang dipakai csv")
     
     def parse_log_file(content):
         lines = content.decode('utf-8').splitlines()
