@@ -4,7 +4,7 @@ import re
 
 def main():
     st.set_page_config(page_title="Sigit", layout="wide")
-    st.title("📄 Baca hasil CRmu didieu gaes")
+    st.title("📄 Baca hasil log CR - format file wajib txt")
 
     uploaded_file = st.file_uploader("Upload file log (.txt)", type=["txt"])
 
@@ -62,7 +62,7 @@ def main():
             st.dataframe(df)
 
             # --- Kesimpulan Retcode Detail ---
-            st.subheader("📊 Kesimpulannya begini gaes")
+            st.subheader("📊 Summary hasil parsing log CR")
             summary = df["Retcode Detail"].value_counts().reset_index()
             summary.columns = ["Retcode Detail", "Jumlah Baris"]
             st.dataframe(summary)
