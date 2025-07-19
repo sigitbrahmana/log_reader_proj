@@ -4,7 +4,7 @@ from modules import app_optlog, app_log_parser
 # Sembunyikan menu dan footer
 hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            
             footer {visibility: hidden;}
             header {visibility: hidden;}
             </style>
