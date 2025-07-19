@@ -27,7 +27,8 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 st.sidebar.title("🔧 Menu")
 
 # Menu navigasi
-app_choice = st.sidebar.radio("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
+# app_choice = st.sidebar.radio("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
+app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
 
 # Panggil halaman berdasarkan pilihan
 if app_choice == "CR LOG Parser":
