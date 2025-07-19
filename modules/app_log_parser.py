@@ -58,13 +58,13 @@ def main():
         if df.empty:
             st.warning("⚠️ Wes bener belum filenya?")
         else:
-            st.success(f"✅ Parsing selesai. Total {len(df)} baris.")
+            st.success(f"✅ Parsing selesai. Total {len(df)} CR.")
             st.dataframe(df)
 
             # --- Kesimpulan Retcode Detail ---
             st.subheader("📊 Summary hasil parsing log CR")
             summary = df["Retcode Detail"].value_counts().reset_index()
-            summary.columns = ["Retcode Detail", "Jumlah Baris"]
+            summary.columns = ["Retcode Detail", "Jumlah CR"]
             st.dataframe(summary)
 
             # --- Download CSV hasil utama ---
