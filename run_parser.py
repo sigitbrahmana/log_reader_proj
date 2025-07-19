@@ -7,6 +7,7 @@ hide_streamlit_style = """
             #MainMenu {visibility: visible;}
             footer {visibility: hidden;}
             header {visibility: visible;}
+            iframe[title="GitHub"] {display: none;} /* Ini menyembunyikan logo GitHub */
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
