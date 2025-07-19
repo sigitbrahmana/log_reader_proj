@@ -7,7 +7,17 @@ hide_streamlit_style = """
             #MainMenu {visibility: visible;}
             footer {visibility: hidden;}
             header {visibility: visible;}
-            [data-testid="stDecoration"] {display: none;} /* Menyembunyikan GitHub & Fork */
+            
+            /* Sembunyikan badge GitHub/Fork di pojok kanan atas */
+            a[href*="github.com"] {
+                        display: none !important;
+            }
+            .st-emotion-cache-6qob1r.e1vs0wn30 { 
+                        display: none !important; 
+            }
+            [data-testid="stDecoration"] {
+                        display: none !important;
+            }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
