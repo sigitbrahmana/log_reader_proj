@@ -31,21 +31,14 @@ with st.sidebar:
         <div style='text-align: center;'>
             <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/my code.png' 
                  style='width: 60%;' />
-            <p style='font-size: 18px; font-weight: bold;'>Scan QRIS untuk traktir ngopi ☕</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    st.markdown(
-        """
-        <div style='text-align: center; margin-top: 10px;'>
-            <span style='font-size: 20px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
+            <span style='font-size: 18px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
                 Scan QRIS untuk nraktir ngopi ☕
             </span>
         </div>
         """,
         unsafe_allow_html=True
     )
+    
 
     # Spacer untuk mendorong teks ke bawah
     st.markdown("<br>" * 2, unsafe_allow_html=True)  # Sesuaikan jumlah <br> sesuai kebutuhan
