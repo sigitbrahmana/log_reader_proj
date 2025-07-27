@@ -39,7 +39,7 @@ def main():
         return Polygon(points)
 
     # ---------------------- Upload File ----------------------
-    uploaded = st.file_uploader("📤 Upload CSV Engineering Parameter", type=['csv'])
+    uploaded = st.file_uploader("📤 Upload CSV Engineering Parameter (filter dulu untuk area tertentu agar proses tidak lama)", type=['csv'])
 
     if uploaded:
         try:
