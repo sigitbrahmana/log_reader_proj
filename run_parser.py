@@ -39,10 +39,7 @@ st.markdown(
         z-index: 100;
     }
     </style>
-    <div class="floating-image-container">
-        <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png?ver=1652848671" alt="QRIS Traktir Kopi">
-        <p>Scan QRIS untuk traktir ngopi ☕</p>
-    </div>
+    <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png?ver=1652848671" class="floating-image">
     """,
     unsafe_allow_html=True
 )
