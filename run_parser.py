@@ -31,25 +31,28 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 st.markdown(
     """
     <style>
-            .floating-image-container {
-                position: fixed;
-                bottom: 10px;
-                left: 10px;
-                text-align: center;
-                z-index: 9999;
-            }
-            .floating-image-container img {
-                width: 150px;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            }
-            .floating-image-container p {
-                margin: 4px 0 0 0;
-                font-size: 14px;
-                font-weight: bold;
-                color: #333;
-            }
+        .floating-image-container {
+            position: fixed;
+            bottom: 10px;  /* Ubah ke bawah kiri */
+            left: 10px;
+            text-align: center;
+            z-index: 9999;
+        }
+        .floating-image-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .floating-image-container p {
+            margin: 4px 0 0 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff; /* Warna tulisan putih */
+            background-color: rgba(0, 0, 0, 0.7); /* Background hitam transparan */
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
     </style>
      <div class="floating-image-container">
         <img src="https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG" alt="QRIS Traktir Kopi">
