@@ -43,12 +43,12 @@ with st.sidebar:
     )
 
     # Spacer untuk mendorong teks ke bawah
-    st.markdown("<br>" * 10, unsafe_allow_html=True)  # Sesuaikan jumlah <br> sesuai kebutuhan
+    st.markdown("<br>" * 2, unsafe_allow_html=True)  # Sesuaikan jumlah <br> sesuai kebutuhan
 
         
     st.markdown(
         """
-        <span style='font-size: 12px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
+        <span style='font-size: 12px; font-weight: bold; color: red; background-color: white; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
                 informasikan jika menemukan bugs Thx!
         </span>
         
