@@ -90,7 +90,8 @@ def main():
 
                 # ---------------------- Ekspor Polygon ----------------------
                 st.markdown("---")
-                st.subheader("💾 Ekspor Polygon Cakupan (GeoJSON & MapInfo TAB)")
+                st.subheader("💾 Ekspor Gcell GeoJSON atau MapInfo TAB")
+                st.write("Tunggu hingga muncul tombol download.")
 
                 polygons = []
                 for _, row in df.iterrows():
