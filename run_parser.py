@@ -39,7 +39,7 @@ st.markdown(
         z-index: 100;
     }
     </style>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Telkomsel_2021.svg" class="floating-image">
+    <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png?ver=1652848671" class="floating-image">
     """,
     unsafe_allow_html=True
 )
