@@ -9,7 +9,7 @@ import os
 
 def main():
     st.set_page_config(page_title="📡 Visualisasi Cakupan Antena", layout="wide")
-    st.title("🧱 Create Gcell")
+    st.title("📡 Create Gcell")
     st.write("Halaman ini untuk membuat Gcell.")
     st.markdown("---")
 
