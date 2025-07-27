@@ -52,7 +52,7 @@ st.markdown(
             }
     </style>
      <div class="floating-image-container">
-        <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png" alt="QRIS Traktir Kopi">
+        <img src="https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG" alt="QRIS Traktir Kopi">
         <p>Scan QRIS untuk traktir ngopi ☕</p>
      </div>
      """,
