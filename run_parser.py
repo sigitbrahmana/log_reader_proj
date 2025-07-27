@@ -39,14 +39,14 @@ st.markdown(
                 z-index: 9999;
             }
             .floating-image-container img {
-                width: 80px;
+                width: 90px;
                 height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             }
             .floating-image-container p {
                 margin: 4px 0 0 0;
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: bold;
                 color: #333;
             }
