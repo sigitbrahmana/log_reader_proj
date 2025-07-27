@@ -41,6 +41,15 @@ with st.sidebar:
         """,
         unsafe_allow_html=True
     )
+    st.markdown(
+        """
+        <span style='font-size: 12px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
+                informasikan jika menemukan bugs Thx!
+        </span>
+        
+        """,
+        unsafe_allow_html=True
+    )        
 # Menu navigasi
 app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
 
