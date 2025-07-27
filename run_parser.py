@@ -39,7 +39,7 @@ st.markdown(
         z-index: 100;
     }
     .floating-image-container img {
-        width: 100px;
+        width: 250px;
         border-radius: 8px;
         box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     }
