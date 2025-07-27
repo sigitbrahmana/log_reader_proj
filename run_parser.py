@@ -33,8 +33,8 @@ st.markdown(
     <style>
             .floating-image-container {
                 position: fixed;
-                top: 10px;
-                right: 10px;
+                bottom: 10px;
+                left: 10px;
                 text-align: center;
                 z-index: 9999;
             }
