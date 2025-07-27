@@ -91,7 +91,7 @@ def main():
                 # ---------------------- Ekspor Polygon ----------------------
                 st.markdown("---")
                 st.subheader("💾 Ekspor Gcell GeoJSON atau MapInfo TAB")
-                st.markdown("_Tunggu hingga muncul tombol download._")
+                #st.markdown("_Tunggu hingga muncul tombol download._")
 
                 polygons = []
                 for _, row in df.iterrows():
