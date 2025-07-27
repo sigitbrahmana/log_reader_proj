@@ -29,7 +29,7 @@ with st.sidebar:
     st.image(
         "https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG",
         caption="Scan QRIS untuk traktir ngopi ☕",
-        use_column_width=True,
+        use_container_width=True
     )
 
 # Menu navigasi
