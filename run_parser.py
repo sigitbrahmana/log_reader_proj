@@ -48,6 +48,7 @@ with st.sidebar:
         """
         <span style='font-size: 12px; font-weight: bold; color: red; background-color: white; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
                 Telah ditambahkan Create Gcell (beta v1) dimenu "Pilih Tools"<br><br>
+                Catatan:<br>
                 Gunakan untuk membuat Gcell diarea kecil agar prosesnya tidak lama, misalkan filter engpar terlebih dahulu untuk area Kecamatan Tebet.<br>
                 <br><br>
                 Informasikan jika menemukan bugs Thx!
