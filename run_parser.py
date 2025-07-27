@@ -47,7 +47,7 @@ with st.sidebar:
     st.markdown(
         """
         <span style='font-size: 12px; font-weight: bold; color: red; background-color: white; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
-                informasikan jika menemukan bugs Thx!
+                Telah ditambahkan Create Gcell (beta version), gunakan untuk membuat Gcell diarea kecil agar prosesnya tidak lama, misalkan filter engpar terlebih dahulu untuk area Kecamatan Tebet. informasikan jika menemukan bugs Thx!
         </span>
         
         """,
