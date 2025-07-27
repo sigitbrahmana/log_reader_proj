@@ -35,7 +35,7 @@ with st.sidebar:
         """
         <div style='text-align: center; margin-top: 10px;'>
             <span style='font-size: 20px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
-                Scan QRIS untuk traktir ngopi ☕
+                Scan QRIS untuk nraktir ngopi ☕
             </span>
         </div>
         """,
