@@ -43,7 +43,7 @@ with st.sidebar:
     )
 
     # Spacer untuk mendorong teks ke bawah
-    st.markdown("<br>" * 30, unsafe_allow_html=True)  # Sesuaikan jumlah <br> sesuai kebutuhan
+    st.markdown("<br>" * 10, unsafe_allow_html=True)  # Sesuaikan jumlah <br> sesuai kebutuhan
 
         
     st.markdown(
