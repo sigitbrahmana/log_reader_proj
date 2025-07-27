@@ -31,32 +31,32 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 st.markdown(
     """
     <style>
-.floating-image-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    text-align: center;
-    z-index: 9999;
-}
-.floating-image-container img {
-    width: 30px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.floating-image-container p {
-    margin: 4px 0 0 0;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-}
-</style>
-    <div class="floating-image-container">
+            .floating-image-container {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                text-align: center;
+                z-index: 9999;
+            }
+            .floating-image-container img {
+                width: 30px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .floating-image-container p {
+                margin: 4px 0 0 0;
+                font-size: 12px;
+                font-weight: bold;
+                color: #333;
+            }
+    </style>
+     <div class="floating-image-container">
         <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png" alt="QRIS Traktir Kopi">
         <p>Scan QRIS untuk traktir ngopi ☕</p>
-    </div>
-    """,
-    unsafe_allow_html=True
+     </div>
+     """,
+     unsafe_allow_html=True
 )
 # app_choice = st.sidebar.radio("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
 app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
