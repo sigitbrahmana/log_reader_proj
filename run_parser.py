@@ -29,7 +29,7 @@ with st.sidebar:
     st.markdown(
         """
         <div style='text-align: center;'>
-            <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG' 
+            <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/my code.png' 
                  style='width: 60%;' />
             <p style='font-size: 18px; font-weight: bold;'>Scan QRIS untuk traktir ngopi ☕</p>
         </div>
