@@ -26,11 +26,16 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 
 # Gambar QRIS di sidebar
 with st.sidebar:
-    st.image(
-        "https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG",
-        use_container_width=True
+    st.markdown(
+        """
+        <div style='text-align: center;'>
+            <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.JPG' 
+                 style='width: 60%;' />
+            <p style='font-size: 18px; font-weight: bold;'>Scan QRIS untuk traktir ngopi ☕</p>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
-    
     st.markdown(
         """
         <div style='text-align: center; margin-top: 10px;'>
