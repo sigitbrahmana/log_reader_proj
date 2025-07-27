@@ -31,12 +31,23 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 st.markdown(
     """
     <style>
-    .floating-image {
+    .floating-image-container {
         position: fixed;
         top: 10px;
         right: 10px;
-        width: 100px;
+        text-align: center;
         z-index: 100;
+    }
+    .floating-image-container img {
+        width: 100px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    }
+    .floating-image-container p {
+        margin: 5px 0 0 0;
+        font-size: 12px;
+        color: black;
+        font-weight: bold;
     }
     </style>
     <img src="https://images-loyalty.ovo.id/public/merchant/08/55/3325508.png?ver=1652848671" class="floating-image">
