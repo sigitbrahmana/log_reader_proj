@@ -27,6 +27,22 @@ st.set_page_config(page_title="Log Tools", layout="wide")
 # st.sidebar.title("🔧 Menu")
 
 # Menu navigasi
+ # Sisipkan gambar yang melayang di pojok kanan atas
+    st.markdown(
+        """
+        <style>
+        .floating-image {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            z-index: 100;
+        }
+        </style>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Telkomsel_2021.svg" class="floating-image">
+        """,
+        unsafe_allow_html=True
+    )
 # app_choice = st.sidebar.radio("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
 app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
 
