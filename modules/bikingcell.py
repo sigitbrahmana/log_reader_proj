@@ -6,6 +6,8 @@ from matplotlib.patches import Wedge
 import geopandas as gpd
 from shapely.geometry import Polygon
 import os
+import tempfile
+import zipfile
 
 def main():
     st.set_page_config(page_title="📡 Visualisasi Cakupan Antena", layout="wide")
@@ -67,6 +69,7 @@ def main():
         col_cell = st.selectbox("📱 Pilih kolom Cell Name (opsional)", ["(Tidak ada)"] + columns)
 
         required_cols = [col_x, col_y, col_azimuth, col_bw, col_radius]
+
         if all(col in df_raw.columns for col in required_cols):
             if st.button("🚀 Mulai Proses"):
                 selected_cols = required_cols.copy()
@@ -84,36 +87,6 @@ def main():
 
                 df.dropna(inplace=True)
                 df["radius_deg"] = df[col_radius] / 111.0
-
-                # ---------------------- Visualisasi Cakupan ----------------------
-                if st.button("📊 Tampilkan Visualisasi"):
-                    if df.empty:
-                        st.warning("Tidak ada data valid setelah pembersihan.")
-                    else:
-                        fig, ax = plt.subplots(figsize=(10, 10))
-                        ax.set_aspect('equal')
-                        all_x = df[col_x].values
-                        all_y = df[col_y].values
-                        max_r = df["radius_deg"].max()
-
-                        if len(all_x) > 1:
-                            ax.set_xlim(all_x.min() - max_r, all_x.max() + max_r)
-                            ax.set_ylim(all_y.min() - max_r, all_y.max() + max_r)
-                        else:
-                            ax.set_xlim(all_x[0] - max_r * 2, all_x[0] + max_r * 2)
-                            ax.set_ylim(all_y[0] - max_r * 2, all_y[0] + max_r * 2)
-
-                        for i, row in df.iterrows():
-                            label = row[col_id] if col_id != "(Tidak ada)" else f"Antenna_{i+1}"
-                            ax.plot(row[col_x], row[col_y], 'ro', markersize=6)
-                            create_antenna_sector(ax, row[col_x], row[col_y], row["radius_deg"],
-                                                  row[col_azimuth], row[col_bw])
-
-                        ax.set_xlabel("Longitude")
-                        ax.set_ylabel("Latitude")
-                        ax.set_title("Visualisasi Cakupan Antena LTE")
-                        ax.grid(True)
-                        st.pyplot(fig)
 
                 # ---------------------- Ekspor Polygon ----------------------
                 st.markdown("---")
@@ -133,19 +106,30 @@ def main():
                 gdf["geometry"] = polygons
                 gdf = gpd.GeoDataFrame(gdf, geometry="geometry", crs="EPSG:4326")
 
+                # Download GeoJSON
                 geojson_bytes = gdf.to_json().encode('utf-8')
                 st.download_button("🌐 Download GeoJSON", data=geojson_bytes,
                                    file_name="antena_sectors.geojson", mime="application/geo+json")
 
+                # Download MapInfo (ZIP)
                 with st.spinner("📦 Mengekspor ke MapInfo TAB..."):
                     try:
-                        tab_path = "antena_output.tab"
-                        gdf.to_file(tab_path, driver="MapInfo File")
-                        with open(tab_path, 'rb') as f:
-                            tab_bytes = f.read()
-                        st.download_button("🗺️ Download MapInfo TAB", data=tab_bytes,
-                                           file_name="antena_sectors.tab", mime="application/octet-stream")
-                        os.remove(tab_path)
+                        with tempfile.TemporaryDirectory() as tmpdir:
+                            tab_path = os.path.join(tmpdir, "antena_sectors.tab")
+                            gdf.to_file(tab_path, driver="MapInfo File")
+
+                            zip_path = os.path.join(tmpdir, "antena_sectors_mapinfo.zip")
+                            with zipfile.ZipFile(zip_path, 'w') as zipf:
+                                for ext in [".tab", ".dat", ".map", ".id"]:
+                                    file_path = tab_path.replace(".tab", ext)
+                                    if os.path.exists(file_path):
+                                        zipf.write(file_path, arcname=os.path.basename(file_path))
+
+                            with open(zip_path, 'rb') as f:
+                                zip_bytes = f.read()
+
+                        st.download_button("🗺️ Download MapInfo TAB (ZIP)", data=zip_bytes,
+                                           file_name="antena_sectors_mapinfo.zip", mime="application/zip")
                     except Exception as e:
                         st.error(f"Gagal ekspor ke TAB: {e}")
         else:
