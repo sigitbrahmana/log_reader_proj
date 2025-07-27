@@ -1,5 +1,5 @@
 import streamlit as st
-from modules import app_optlog, app_log_parser
+from modules import app_optlog, app_log_parser, bikingcell
 
 # Sembunyikan menu dan footer
 hide_streamlit_style = """
@@ -54,10 +54,12 @@ with st.sidebar:
         unsafe_allow_html=True
     )        
 # Menu navigasi
-app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser"])
+app_choice = st.selectbox("Pilih Tools:", ["CR LOG Parser", "OPTLOG Parser", "Create Gcell"])
 
 # Panggil halaman berdasarkan pilihan
 if app_choice == "CR LOG Parser":
     app_log_parser.main()
 elif app_choice == "OPTLOG Parser":
     app_optlog.main()
+elif app_choice == "Create Gcell":
+    bikingcell.main()
