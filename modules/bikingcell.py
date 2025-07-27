@@ -7,6 +7,10 @@ import geopandas as gpd
 from shapely.geometry import Polygon
 import os
 
+def main():
+    st.title("🧱 Create Gcell")
+    st.write("Halaman ini untuk membuat Gcell.")
+    
 # ---------------------- Konfigurasi Halaman ----------------------
 st.set_page_config(page_title="📡 Visualisasi Cakupan Antena", layout="wide")
 st.title("📡 Visualisasi Cakupan Antena LTE dari CSV")
