@@ -32,7 +32,7 @@ with st.sidebar:
             <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/my code.png' 
                  style='width: 60%;' />
             <span style='font-size: 18px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
-                Scan QRIS untuk nraktir ngopi ☕
+                Scan QRIS traktir creator kopi ☕
             </span>
         </div>
         """,
