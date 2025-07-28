@@ -11,7 +11,11 @@ hide_streamlit_style = """
     <style>
         #MainMenu {visibility: hidden;} /* Menyembunyikan menu utama Streamlit */
         footer {visibility: hidden;} /* Menyembunyikan footer "Made with Streamlit" */
-        a[href*="github.com"] {display: none !important;} /* Menyembunyikan link GitHub jika ada */
+        /* Menyembunyikan tautan atau tombol yang mengarah ke GitHub, termasuk tombol Deploy */
+        a[href*="github.com"] {display: none !important;}
+        [data-testid="stDeployButton"] {
+            display: none !important;
+        }
         /* Menyembunyikan tombol collapse sidebar */
         [data-testid="stSidebarCollapseButton"] {
             display: none !important;
