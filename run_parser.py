@@ -20,6 +20,10 @@ hide_streamlit_style = """
         [data-testid="stSidebarCollapseButton"] {
             display: none !important;
         }
+        /* Menyembunyikan header utama Streamlit */
+        [data-testid="stHeader"] {
+            display: none !important;
+        }
     </style>
 """
 
