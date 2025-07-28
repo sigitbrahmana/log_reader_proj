@@ -14,9 +14,9 @@ hide_streamlit_style = """
             # .st-emotion-cache-6qob1r.e1vs0wn30 { 
             #             display: none !important; 
             # }
-            [data-testid="stDecoration"] {
-                        display: none !important;
-            }
+            # [data-testid="stDecoration"] {
+            #             display: none !important;
+            # }
             </style>
 """
 
