@@ -12,7 +12,10 @@ hide_streamlit_style = """
         #MainMenu {visibility: hidden;} /* Menyembunyikan menu utama Streamlit */
         footer {visibility: hidden;} /* Menyembunyikan footer "Made with Streamlit" */
         a[href*="github.com"] {display: none !important;} /* Menyembunyikan link GitHub jika ada */
-        /* Aturan CSS lain yang mungkin terlalu umum dan berpotensi menyembunyikan sidebar telah dihapus */
+        /* Menyembunyikan tombol collapse sidebar */
+        [data-testid="stSidebarCollapseButton"] {
+            display: none !important;
+        }
     </style>
 """
 
