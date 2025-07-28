@@ -6,18 +6,13 @@ from modules import app_optlog, app_log_parser, bikingcell
 st.set_page_config(page_title="Log Tools", layout="wide", initial_sidebar_state="expanded")
 
 # Sembunyikan elemen-elemen Streamlit standar yang tidak diinginkan
+# Aturan CSS ini telah disederhanakan agar tidak menyembunyikan sidebar
 hide_streamlit_style = """
     <style>
-        #MainMenu, footer, header {visibility: hidden;}
-        a[href*="github.com"] {display: none !important;}
-        .st-emotion-cache-6qob1r.e1vs0wn30 {display: none !important;}
-        [data-testid="stDecoration"] {display: none !important;}
-        /* Baris di bawah ini dikomentari karena Anda ingin sidebar selalu muncul.
-           Jika tidak dikomentari, ini akan menyembunyikan sidebar.
-           section[data-testid="stSidebar"] > div:first-child {
-               display: none !important;
-           }
-        */
+        #MainMenu {visibility: hidden;} /* Menyembunyikan menu utama Streamlit */
+        footer {visibility: hidden;} /* Menyembunyikan footer "Made with Streamlit" */
+        a[href*="github.com"] {display: none !important;} /* Menyembunyikan link GitHub jika ada */
+        /* Aturan CSS lain yang mungkin terlalu umum dan berpotensi menyembunyikan sidebar telah dihapus */
     </style>
 """
 
