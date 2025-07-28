@@ -129,7 +129,7 @@ def main():
                             with open(zip_path, 'rb') as f:
                                 zip_bytes = f.read()
 
-                        st.download_button("🗺️ Download MapInfo TAB (ZIP)", data=zip_bytes,
+                        st.download_button("🗺️ Download .TAB (ZIP)", data=zip_bytes,
                                            file_name="antena_sectors_mapinfo.zip", mime="application/zip")
                     except Exception as e:
                         st.error(f"Gagal ekspor ke TAB: {e}")
