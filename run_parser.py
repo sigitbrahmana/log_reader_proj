@@ -35,7 +35,7 @@ with st.sidebar:
     st.markdown(
         """
         <div style='text-align: center;'>
-            <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/my%20code.png'
+            <img src='https://raw.githubusercontent.com/sigitbrahmana/log_reader_proj/refs/heads/mainan/Capture.jpeg'
                  style='width: 60%; margin-bottom: 10px;' />
             <div style='font-size: 16px; font-weight: bold; color: white; background-color: black; padding: 6px 12px; border-radius: 8px; display: inline-block;'>
                 QRIS Ngopi ☕
